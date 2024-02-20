@@ -1,8 +1,7 @@
-import { Container } from "./components/server/Container/Container";
-import { Text } from "./components/server/Text/Text";
+import { Container } from "../../../mod.ts";
+import { Text } from "../../../mod.ts";
 import { BaseDialogHeaderPropsType } from "./types.ts";
 import { MouseEvent } from "react";
-//import configSapians from "@config/tailwind/tw.basic.sapians.conf.ts";
 
 export const BaseDialogHeader = ({
 	children,

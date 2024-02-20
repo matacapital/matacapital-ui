@@ -2,9 +2,12 @@
 	"name": "matacapital-ui",
 	"version": "1.0.0",
 	"description": "a library of React shared components and services for all Matacapital group brands.",
-	"main": "index.js",
-	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.cjs",
+	"types": "dist/index.d.ts",
 	"scripts": {
+		"build": "tsup",
+		"lint": "tsc",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [
@@ -24,6 +27,7 @@
 	},
 	"devDependencies": {
 		"ts-node": "^10.9.2",
+		"tsup": "^8.0.2",
 		"typescript": "^5.3.3"
 	}
 }

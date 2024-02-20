@@ -1,4 +1,4 @@
-import { countries } from "./constants/translation/countries";
+import { countries } from "../../constants/translation/countries";
 
 export class SorterCountries {
 	/**
