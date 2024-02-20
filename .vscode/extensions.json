@@ -1,0 +1,7 @@
+{
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"dotenv.dotenv-vscode",
+		"YoavBls.pretty-ts-errors"
+	]
+}
