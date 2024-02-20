@@ -12,9 +12,18 @@
 		"design",
 		"react"
 	],
-	"author": "yttiiz (for Matacapital)",
-	"git": "",
+	"homepage": "https://www.matacapital.com/fr/",
+	"author": "Matacapital team",
+	"repository": {
+		"type": "git",
+		"url": "",
+		"directory": ""
+	},
 	"dependencies": {
 		"react": "^18.2.0"
+	},
+	"devDependencies": {
+		"ts-node": "^10.9.2",
+		"typescript": "^5.3.3"
 	}
 }
