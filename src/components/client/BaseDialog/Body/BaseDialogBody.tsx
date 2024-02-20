@@ -1,6 +1,6 @@
 import { Container } from "../../../../components/server/Container/mod.ts";
 import { BaseDialogBodyPropsType } from "./types.ts";
-import React from "react";
+
 
 export const BaseDialogBody = ({
 	children,

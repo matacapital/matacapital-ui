@@ -1,6 +1,6 @@
 import { IconSyncAlt } from "../../../../../components/server/Icon/mod";
 import { Button } from "../../../Button/Button";
-import React from "react";
+
 
 export const Loader = () => {
 	const iconLoader = (

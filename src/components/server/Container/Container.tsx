@@ -1,6 +1,6 @@
 import { ContainerPropsType } from "./types.ts";
 import { definition } from "../../definition.ts";
-import React from "react";
+
 
 export const Container = ({
 	children,

@@ -1,6 +1,6 @@
 import { Text } from "../Text/mod.ts";
 import { LinkPropsType } from "./types.ts";
-import React from "react";
+
 
 export const Link = ({
 	variant,

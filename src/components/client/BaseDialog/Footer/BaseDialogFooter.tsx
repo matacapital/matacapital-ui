@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "../../../../components/server/Container/Container";
 import { OneButton } from "./FooterWithButtons/mod.ts";
 import { BaseDialogFooterPropsType } from "./types.ts";

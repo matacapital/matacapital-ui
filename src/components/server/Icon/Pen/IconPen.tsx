@@ -2,7 +2,7 @@ import { IconPropsType } from "../types.ts";
 import { SizedIconPenS } from "./SizedIconPenS.tsx";
 import { SizedIconPenM } from "./SizedIconPenM.tsx";
 import { SizedIconPenL } from "./SizedIconPenL.tsx";
-import React from "react";
+
 
 export const IconPen = (
   {

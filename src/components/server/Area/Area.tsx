@@ -1,6 +1,6 @@
 import { Container } from "../Container/mod.ts";
 import { AreaPropsType } from "./types.ts";
-import React from "react";
+
 
 export const Area = ({
 	children,

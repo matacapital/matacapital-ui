@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "a library of React shared components and services for all Matacapital group brands.",
 	"main": "dist/index.js",
-	"module": "dist/index.cjs",
+	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "tsup",

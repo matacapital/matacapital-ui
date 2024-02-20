@@ -1,6 +1,6 @@
 import { definition } from "../../../definition.ts";
 import { IconPropsType } from "../types.ts";
-import React from "react";
+
 
 export const IconPlay = ({ className, variant, size = "m" }: IconPropsType) => {
 	className = className ?? "";

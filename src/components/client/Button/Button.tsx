@@ -5,7 +5,7 @@ import { Text } from "../../server/Text/mod.ts";
 import { ButtonPropsType } from "./types.ts";
 import { useState } from "../../client-deps.ts";
 import { MouseEvent } from "../../client-deps.ts";
-import React from "react";
+
 
 export const Button = ({
 	type = "button",

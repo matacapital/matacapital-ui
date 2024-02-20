@@ -1,6 +1,6 @@
 import { Text } from "../Text/mod.ts";
 import { ParagraphPropsType } from "./types.ts";
-import React from "react";
+
 
 export const Paragraph = ({
 	size = "m",
