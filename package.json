@@ -19,8 +19,8 @@
 	"author": "Matacapital team",
 	"repository": {
 		"type": "git",
-		"url": "",
-		"directory": ""
+		"url": "https://github.com/matacapital/matacapital-ui",
+		"directory": "/src"
 	},
 	"dependencies": {
 		"react": "^18.2.0"
