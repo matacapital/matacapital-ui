@@ -1,3 +1,4 @@
+import React from "react";
 import { Text } from "../Text/mod.ts";
 import { ParagraphPropsType } from "./types.ts";
 

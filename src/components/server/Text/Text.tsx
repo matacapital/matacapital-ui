@@ -1,3 +1,4 @@
+import React from "react";
 import { definition } from "../../definition.ts";
 import { TextPropsType } from "./types.ts";
 

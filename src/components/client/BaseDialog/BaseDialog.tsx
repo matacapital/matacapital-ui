@@ -5,6 +5,7 @@ import { BaseDialogBody } from "./Body/BaseDialogBody.tsx";
 import { BaseDialogFooter } from "./Footer/BaseDialogFooter.tsx";
 import { BaseDialogPropsType } from "./types.ts";
 import { Paragraph } from "../../server/Paragraph/Paragraph";
+import React from "react";
 
 export const BaseDialog = ({
 	title,

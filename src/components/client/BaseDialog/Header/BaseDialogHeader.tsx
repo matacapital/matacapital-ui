@@ -1,3 +1,4 @@
+import React from "react";
 import { Container } from "../../../mod.ts";
 import { Text } from "../../../mod.ts";
 import { BaseDialogHeaderPropsType } from "./types.ts";
