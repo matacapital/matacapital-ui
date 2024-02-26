@@ -1,3 +1,4 @@
+import React from "react";
 import { IconPropsType } from "../types.ts";
 import { SizedIconPenS } from "./SizedIconPenS.tsx";
 import { SizedIconPenM } from "./SizedIconPenM.tsx";

@@ -1,3 +1,4 @@
+import React from "react";
 import { Container } from "../../../../components/server/Container/Container";
 import { OneButton } from "./FooterWithButtons/mod.ts";
 import { BaseDialogFooterPropsType } from "./types.ts";
@@ -19,7 +20,7 @@ export const BaseDialogFooter = ({
 
 	let content = <div />;
 
-	if (buttonsContent.length === 1) {
+	if (buttonsContent.length === 1 && buttonsContent[0]) {
 		content = (
 			<OneButton
 				isOpened={isOpened}

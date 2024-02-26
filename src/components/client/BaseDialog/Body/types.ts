@@ -1,8 +1,8 @@
-import { ComponentChildren } from "../../deps.ts";
-import { VariantType } from "../../types.ts";
+import { ChildrenComponents } from "../../../server-deps.ts";
+import { VariantType } from "../../../types.ts";
 
 export type BaseDialogBodyPropsType = {
-  children: ComponentChildren;
-  className?: string;
-  variant?: VariantType;
+	children: ChildrenComponents;
+	className?: string;
+	variant?: VariantType;
 };

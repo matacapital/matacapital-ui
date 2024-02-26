@@ -1,3 +1,4 @@
+import React from "react";
 import { Text, TextElementType } from "../Text/mod.ts";
 import { ListElementType, ListPropsType } from "./types.ts";
 

@@ -1,3 +1,4 @@
+import React from "react";
 import { Container } from "../Container/mod.ts";
 import { AreaPropsType } from "./types.ts";
 
