@@ -1,38 +1,34 @@
+# matacapital-ui 1.0.0
+This is a specific **user interface** toolkit created for [Matacapital](https://www.matacapital.com/fr/). It's allow working with _React_ **components**, out of the box, and **services** to handle basic tasks.
 
-<p align="center">
-  <img src="./logo.svg" alt="matacapital" />
-</p>
+## Installation
+Run this command :
+```
+npm i matacapital-ui
+```
+## Tools
+### components
+- client - client side components
+- server - server side components
 
-# Get Started
-This repository is a specific **user interface** toolkit created for [Matacapital](https://www.matacapital.com/fr/). It's allow working with _React_ **components**, out of the box, and **services** to handle basic tasks.
+_See the package source for more details_.
 
-# Contributions
-To make some changes, or add some new components, you have to follow those steps :
+### services
+- crypto - crypto message and hash password
+- fetcher - **_fetch_** method and options to http response
+- formatter - date, string, number formatting
+- sorter - constant array sorting
+
+## Import
+import all elements of the package, like so :
+```
+import * as mata from  'matacapital-ui';
+```
+or individualy (e.g) :
+```
+import { DateFormatter } from  'matacapital-ui';
+```
 
 
-### 1. Once your work is done : 
-- If it's the first time, run this command (to make the package available locally) :
-```
-npm link
-```
-- next time :
-```
-npm run build
-```
-
-### 2. Then check if your changes works fine 
-- Create a `test` folder and a `script.js` file inside.
-
-### 3. Open it :
-- If it's the first time, run this command :
-```
-npm link matacapital-ui
-```
-- next time :
-```
-npm i
-```
-### 4. Finally, try to import your element
-`import { YourComponent } from "matacapital-ui";` 
-
-You wil see how it works in real development world.
+## ⚠️ Licence
+This package is open to everyone, but its source code **cannot be change**, except by team Matacapital contributors.
