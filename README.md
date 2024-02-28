@@ -1,4 +1,4 @@
-# matacapital-ui 1.0.0
+# matacapital-ui
 This is a specific **user interface** toolkit created for [Matacapital](https://www.matacapital.com/fr/). It's allow working with _React_ **components**, out of the box, and **services** to handle basic tasks.
 
 ## Installation
