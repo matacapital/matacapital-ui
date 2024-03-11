@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
 import { Container } from "../../../../components/server/Container/mod.ts";
 import { BaseDialogBodyPropsType } from "./types.ts";
-
 
 export const BaseDialogBody = ({
 	children,

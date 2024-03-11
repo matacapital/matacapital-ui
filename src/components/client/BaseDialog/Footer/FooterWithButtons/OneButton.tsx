@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../../../Button/mod.ts";
 import React, { useEffect, useState, MouseEvent } from "react";
 import { Loader } from "./Loader.tsx";

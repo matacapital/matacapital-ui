@@ -1,12 +1,11 @@
 'use client';
+
 import { Container } from "../../server/Container/mod.ts";
 import { definition } from "../../definition.ts";
 import { Text } from "../../server/Text/mod.ts";
 import { ButtonPropsType } from "./types.ts";
-import { useState } from "../../client-deps.ts";
-import { MouseEvent } from "../../client-deps.ts";
+import { useState, MouseEvent } from "../../client-deps.ts";
 import React from "react";
-
 
 export const Button = ({
 	type = "button",
