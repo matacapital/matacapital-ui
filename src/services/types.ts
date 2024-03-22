@@ -25,16 +25,20 @@ export type FetcherParamaterType = {
   contentType?: string;
 };
 
-export type SuccessResponseType<T extends Record<string, string> = {}> = {
-  code: 200 | 201;
-  data: T;
+export type SuccessResponseType = {
+	code: number;
+	data: Record<string, string>;
 };
 
 export type ErrorResponseType = {
-  code: 400 | 401 | 403 | 404 | 500;
-  message: string;
+	code: number;
+	message: string;
 };
 
-export type ApiResponseDataType<
-  T extends (SuccessResponseType | ErrorResponseType)
-> = T;
+export type ApiResponseDataType = Prettify<
+	SuccessResponseType | ErrorResponseType
+>;
+
+type Prettify<T> = {
+	[K in keyof T]: T[K];
+} & {};

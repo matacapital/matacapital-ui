@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { Button, Container } from "../../../src/components/mod";
+import { Button, Container, Input } from "../src/components/mod";
 
 // All needed
 const variants = [
@@ -95,5 +95,26 @@ describe("<Container /> properties", () => {
 				expect(queryByText(element)).toStrictEqual(elToCompare);
 			});
 		}
+	}
+});
+
+//=======================| Input |=======================//
+
+describe("<Input /> properties", () => {
+	for (const variant of variants) {
+		it(`label has class ${variant} & input has name ${variant} `, () => {
+			const { baseElement } = render(
+				<Input
+					name={variant}
+					className={variant}
+				/>,
+			);
+
+			const label = baseElement.querySelector("label");
+			const input = label.querySelector("input");
+
+			expect(label).toHaveClass(variant);
+			expect(input).toHaveAttribute("name", variant);
+		});
 	}
 });
