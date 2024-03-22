@@ -41,6 +41,7 @@ export class DateFormatter {
     locale = "fr-FR",
   ) {
     const opts: Intl.DateTimeFormatOptions = {
+      timeZone: "Europe/Paris",
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
@@ -59,6 +60,7 @@ export class DateFormatter {
     locale = "fr-FR",
   ) {
     const opts: Intl.DateTimeFormatOptions = {
+      timeZone: "Europe/Paris",
       day: "numeric",
       month: "long",
       year: "numeric",
