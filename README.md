@@ -21,11 +21,11 @@ _See the package source for more details_.
 
 ## Import
 import all elements of the package, like so :
-```
+```javascript
 import * as mata from  'matacapital-ui';
 ```
 or individualy (e.g) :
-```
+```javascript
 import { DateFormatter } from  'matacapital-ui';
 ```
 

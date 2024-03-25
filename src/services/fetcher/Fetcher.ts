@@ -5,15 +5,24 @@ export class Fetcher {
 		return await Fetcher.fetchData({ url, data: searchParams });
 	}
 
-	public static async postData(url: string, data = {}) {
+	public static async postData(
+		url: string,
+		data: string | Record<string, string> = {},
+	) {
 		return await Fetcher.fetchData({ url, data, method: "POST" });
 	}
 
-	public static async putData(url: string, data = {}) {
+	public static async putData(
+		url: string,
+		data: string | Record<string, string> = {},
+	) {
 		return await Fetcher.fetchData({ url, data, method: "PUT" });
 	}
 
-	public static async deleteData(url: string, data = {}) {
+	public static async deleteData(
+		url: string,
+		data: string | Record<string, string> = {},
+	) {
 		return await Fetcher.fetchData({ url, data, method: "DELETE" });
 	}
 
