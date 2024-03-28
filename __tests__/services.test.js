@@ -3,7 +3,10 @@ import {
 	Fetcher,
 	DateFormatter,
 	NumberFormatter,
+	Validator,
 } from "../src/services/mod";
+
+//=======================================| Fetcher |=======================================//
 
 describe("Fetcher (test with 'dummy json api')", () => {
 	it("get data", async () => {
@@ -52,6 +55,8 @@ describe("Fetcher (test with 'dummy json api')", () => {
 	});
 });
 
+//=======================================| Date formatter |=======================================//
+
 describe("DateFormatter", () => {
 	it("short date", () => {
 		const shortDate = DateFormatter.short(1706633838705);
@@ -76,6 +81,8 @@ describe("DateFormatter", () => {
 	});
 });
 
+//=======================================| Number formatter |=======================================//
+
 describe("NumberFormatter", () => {
 	it("compact currency", () => {
 		const compactCurrency = NumberFormatter.compactCurrency(3000000);
@@ -85,5 +92,17 @@ describe("NumberFormatter", () => {
 	it("basic currency", () => {
 		const basicCurrency = NumberFormatter.basicCurrency(30000);
 		expect(basicCurrency).toMatch(/^30\s?000\s?€$/);
+	});
+});
+
+//=======================================| Validator |=======================================//
+
+describe("Validator", () => {
+	it("'test@test.fr' is an email", () => {
+		expect(Validator.isEmail("test@test.fr")).toBe(true);
+	});
+
+	it("'test' is not an email", () => {
+		expect(Validator.isEmail("test")).toBe(false);
 	});
 });
