@@ -1,6 +1,6 @@
 {
 	"name": "matacapital-ui",
-	"version": "1.0.203",
+	"version": "1.0.204",
 	"description": "a library of React shared components and services for all Matacapital group brands.",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
