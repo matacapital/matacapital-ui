@@ -1,4 +1,4 @@
-import { ApiResponseDataType, FetcherParamaterType } from "../mod";
+import { ErrorResponseType, FetcherParamaterType, SuccessResponseType } from "../mod";
 
 export class Fetcher {
 	public static async getData(url: string, searchParams: string) {
@@ -31,7 +31,7 @@ export class Fetcher {
 		data,
 		method = "GET",
 		contentType = "application/json",
-	}: FetcherParamaterType): Promise<ApiResponseDataType> {
+	}: FetcherParamaterType): Promise<SuccessResponseType | ErrorResponseType> {
 		const opts: RequestInit = {
 			method,
 			mode: "cors",
@@ -56,15 +56,18 @@ export class Fetcher {
 
 			return response.ok
 				? {
+						ok: true,
 						code: response.status,
 						data: await response.json(),
 				  }
 				: {
+						ok: false,
 						code: response.status,
 						message: response.statusText,
 				  };
 		} catch (_) {
 			return {
+				ok: false,
 				code: 500,
 				message: "This api call failed.",
 			};

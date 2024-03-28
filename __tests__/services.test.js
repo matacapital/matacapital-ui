@@ -11,11 +11,12 @@ import {
 describe("Fetcher (test with 'dummy json api')", () => {
 	it("get data", async () => {
 		const res = await Fetcher.getData("https://dummyjson.com/users", "limit=1");
-		res["message"]
-			? res.message.includes("failed")
-				? expect(res).toMatchObject({ code: 500 })
-				: expect(res).toMatchObject({ code: 404 })
-			: expect(res).toMatchObject({ code: 200 });
+		
+		res.ok
+			? expect(res).toMatchObject({ code: 200 })
+			: res.message.includes("failed")
+			? expect(res).toMatchObject({ code: 500 })
+			: expect(res).toMatchObject({ code: 404 });
 	});
 
 	it("post data", async () => {
@@ -25,11 +26,11 @@ describe("Fetcher (test with 'dummy json api')", () => {
 			age: 25,
 		});
 
-		res["message"]
-			? res.message.includes("failed")
-				? expect(res).toMatchObject({ code: 500 })
-				: expect(res).toMatchObject({ code: 404 })
-			: expect(res).toMatchObject({ code: 200 });
+		res.ok
+			? expect(res).toMatchObject({ code: 200 })
+			: res.message.includes("failed")
+			? expect(res).toMatchObject({ code: 500 })
+			: expect(res).toMatchObject({ code: 404 });
 	});
 
 	it("put data", async () => {
@@ -37,21 +38,21 @@ describe("Fetcher (test with 'dummy json api')", () => {
 			lastName: "Doe",
 		});
 
-		res["message"]
-			? res.message.includes("failed")
-				? expect(res).toMatchObject({ code: 500 })
-				: expect(res).toMatchObject({ code: 404 })
-			: expect(res).toMatchObject({ code: 200 });
+		res.ok
+			? expect(res).toMatchObject({ code: 200 })
+			: res.message.includes("failed")
+			? expect(res).toMatchObject({ code: 500 })
+			: expect(res).toMatchObject({ code: 404 });
 	});
 
 	it("delete data", async () => {
 		const res = await Fetcher.deleteData("https://dummyjson.com/users/1");
 
-		res["message"]
-			? res.message.includes("failed")
-				? expect(res).toMatchObject({ code: 500 })
-				: expect(res).toMatchObject({ code: 404 })
-			: expect(res).toMatchObject({ code: 200 });
+		res.ok
+			? expect(res).toMatchObject({ code: 200 })
+			: res.message.includes("failed")
+			? expect(res).toMatchObject({ code: 500 })
+			: expect(res).toMatchObject({ code: 404 });
 	});
 });
 

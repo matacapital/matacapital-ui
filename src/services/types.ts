@@ -26,19 +26,13 @@ export type FetcherParamaterType = {
 };
 
 export type SuccessResponseType = {
+	ok: true;
 	code: number;
 	data: Record<string, string>;
 };
 
 export type ErrorResponseType = {
+	ok: false;
 	code: number;
 	message: string;
 };
-
-export type ApiResponseDataType = Prettify<
-	SuccessResponseType | ErrorResponseType
->;
-
-type Prettify<T> = {
-	[K in keyof T]: T[K];
-} & {};
