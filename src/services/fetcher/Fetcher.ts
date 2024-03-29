@@ -1,7 +1,7 @@
 import { ErrorResponseType, FetcherParamaterType, SuccessResponseType } from "../mod";
 
 export class Fetcher {
-	public static async getData(url: string, searchParams: string) {
+	public static async getData(url: string, searchParams?: string) {
 		return await Fetcher.fetchData({ url, data: searchParams });
 	}
 
