@@ -48,7 +48,12 @@ export class Fetcher {
 
 		try {
 			if (method === "GET" || method === "HEAD") {
-				response = await fetch(url + "?" + new URLSearchParams(data), opts);
+				data
+					? (response = await fetch(
+							url + "?" + new URLSearchParams(data),
+							opts,
+					  ))
+					: (response = await fetch(url, opts));
 			} else {
 				opts["body"] = JSON.stringify(data);
 				response = await fetch(url, opts);

@@ -20,7 +20,7 @@ export type MethodType =
 
 export type FetcherParamaterType = {
   url: string;
-  data: string | Record<string, string>;
+  data?: string | Record<string, string>;
   method?: MethodType;
   contentType?: string;
 };
