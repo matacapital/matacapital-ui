@@ -22,7 +22,6 @@ export const Input = ({
 	maxLength = undefined,
 	label,
 	placeholder,
-	className = "",
 	type = "text",
 	onFocus,
 	onBlur,
@@ -39,24 +38,27 @@ export const Input = ({
 	isDisabled = false,
 	isFocus = false,
 	isSelectedOnClick = false,
-}: InputPropsType) => {
+	className = "",
+	containerClassName,
+	labelClassName,
+	feedbackMessageClassName,
+	iconTextClassName,
+	helpTextClassName,
+	classNameInput,
+}: InputPropsType & {
+	containerClassName: string;
+	labelClassName: string;
+	feedbackMessageClassName: string;
+	iconTextClassName: string;
+	helpTextClassName: string;
+	classNameInput: string;
+}) => {
 	const [signalFocus, setIsSignalFocus] = useState(isFocus);
 
-	const labelClassName = "text-base1-content py-2 md:py-4";
-	const feedbackMessageClassName = "text-left text-danger-default flex-auto";
-	const iconTextClassName = "px-4";
-	const helpTextClassName =
-		"text-right underline pt-2 flex-auto text-base4-default";
-
-	let containerClassName =
-		"flex flex-row w-full pr-4 rounded-l-2 rounded-r-2 h-12 items-center";
 	let bgColor = "";
 	let contentColor = "";
-	// let styleWebkit = {};
 
 	if (isDisabled !== undefined && isDisabled == true) {
-		//TODO text-fill depending on theme
-		//styleWebkit = {{"-webkit-text-fill-color":"#FFF","opacity":"1"}};
 		bgColor = "bg-disabled-default";
 		contentColor = "text-disabled-content";
 	} else {
@@ -84,9 +86,6 @@ export const Input = ({
 		" " +
 		(signalFocus ? "ring-2" : "ring-none");
 
-	let classNameInput = `outline-none w-full focus:outline-none flex-1${
-		leadingIcon || leadingText ? "" : " pl-2"
-	}`;
 	classNameInput += " " + bgColor + " " + borderColor + " " + contentColor;
 
 	const onBlurHandler = (event: FocusEvent<HTMLInputElement>) => {
@@ -167,7 +166,6 @@ export const Input = ({
 					value={value}
 					autoFocus={isFocus}
 					disabled={isDisabled}
-					// style={styleWebkit}
 				/>
 				{trailingText ? (
 					<Container
