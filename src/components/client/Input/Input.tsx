@@ -75,7 +75,6 @@ export const Input = ({
 	}
 
 	containerClassName +=
-		" border-2 " +
 		bgColor +
 		" " +
 		borderColor +
