@@ -13,6 +13,7 @@
     "lint": "tsc",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
+    "tw-watch": "npx tailwind -i ./src/stories/style/tailwind-input.css -o ./src/stories/style/style.css --watch",
     "build-storybook": "storybook build"
   },
   "keywords": [
