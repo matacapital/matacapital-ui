@@ -16,6 +16,5 @@ export type BaseDialogFooterPropsType = {
   buttonsContent?: ButtonContentType[];
   className?: string;
   variant?: VariantType;
-  isOpened: boolean;
   toggleModal?: () => void;
 };

@@ -5,18 +5,20 @@ import { BaseDialogBody } from "./Body/BaseDialogBody.tsx";
 import { BaseDialogFooter } from "./Footer/BaseDialogFooter.tsx";
 import { BaseDialogPropsType } from "./types.ts";
 import { Paragraph } from "../../server/Paragraph/Paragraph";
-import React from "react";
+import React, { ForwardedRef } from "react";
 
-export const BaseDialog = ({
-	title,
-	buttonsContent,
-	isOpened = false,
-	className,
-	children,
-	toggleCallback,
-	isCancellable = true,
-	onCancel,
-}: BaseDialogPropsType) => {
+const Dialog = (
+	{
+		title,
+		buttonsContent,
+		className,
+		children,
+		close,
+		isCancellable = true,
+		onCancel,
+	}: BaseDialogPropsType,
+	ref: ForwardedRef<null>,
+) => {
 	className = className ?? "";
 	className += "absolute w-[90%] sm:w-[575px] p-none";
 	className = className.trim();
@@ -27,38 +29,34 @@ export const BaseDialog = ({
 	classNameBackdrop = classNameBackdrop.trim();
 
 	return (
-		<div className={isOpened ? "" : "hidden"}>
-			<div
-				className={classNameBackdrop}
-				style={{ opacity: 0.75 }}
-			></div>
-			<dialog
-				open={isOpened}
-				className={className}
-				style={{ top: "100px" }}
+		<dialog
+			ref={ref}
+			className={className}
+			style={{ top: "100px" }}
+		>
+			<BaseDialogHeader
+				toggleModal={close}
+				onCancel={onCancel}
+				isCancellable={isCancellable}
+				variant={"primary"}
 			>
-				<BaseDialogHeader
-					toggleModal={toggleCallback}
-					onCancel={onCancel}
-					isCancellable={isCancellable}
-					variant={"primary"}
-				>
-					{title}
-				</BaseDialogHeader>
-				<BaseDialogBody>
-					{typeof children === "string" ? (
-						<Paragraph>{children}</Paragraph>
-					) : (
-						children
-					)}
-				</BaseDialogBody>
-				<BaseDialogFooter
-					isOpened={isOpened}
-					buttonsContent={buttonsContent}
-					toggleModal={toggleCallback}
-					variant={"secondary"}
-				/>
-			</dialog>
-		</div>
+				{title}
+			</BaseDialogHeader>
+			<BaseDialogBody>
+				{typeof children === "string" ? (
+					<Paragraph>{children}</Paragraph>
+				) : (
+					children
+				)}
+			</BaseDialogBody>
+			<BaseDialogFooter
+				buttonsContent={buttonsContent}
+				toggleModal={close}
+				variant={"secondary"}
+			/>
+		</dialog>
 	);
 };
+
+const BaseDialog = React.forwardRef(Dialog);
+export { BaseDialog };

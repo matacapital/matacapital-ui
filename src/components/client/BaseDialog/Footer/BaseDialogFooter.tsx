@@ -10,7 +10,6 @@ export const BaseDialogFooter = ({
 	className,
 	variant = "base1",
 	toggleModal,
-	isOpened = false,
 }: BaseDialogFooterPropsType) => {
 	className = className ?? "";
 	className += " px-4 py-2 rounded-b-2 md:rounded-b-4";
@@ -25,7 +24,6 @@ export const BaseDialogFooter = ({
 	if (buttonsContent.length === 1 && buttonsContent[0]) {
 		content = (
 			<OneButton
-				isOpened={isOpened}
 				primaryButton={buttonsContent[0]}
 				toggleModal={toggleModal}
 			/>
