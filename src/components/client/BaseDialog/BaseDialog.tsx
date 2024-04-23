@@ -13,6 +13,7 @@ const Dialog = (
 		buttonsContent,
 		className,
 		children,
+		footerClassName,
 		close,
 		isCancellable = true,
 		onCancel,
@@ -20,7 +21,9 @@ const Dialog = (
 	ref: ForwardedRef<null>,
 ) => {
 	className = className ?? "";
-	className += "absolute w-[90%] sm:w-[575px] p-none";
+	className +=
+		(className ? " " : "") +
+		"backdrop:bg-grey-50 absolute w-[90%] sm:w-[575px] p-none";
 	className = className.trim();
 
 	let classNameBackdrop = " h-screen w-full";
@@ -32,7 +35,6 @@ const Dialog = (
 		<dialog
 			ref={ref}
 			className={className}
-			style={{ top: "100px" }}
 		>
 			<BaseDialogHeader
 				toggleModal={close}
@@ -52,7 +54,7 @@ const Dialog = (
 			<BaseDialogFooter
 				buttonsContent={buttonsContent}
 				toggleModal={close}
-				variant={"secondary"}
+				className={footerClassName}
 			/>
 		</dialog>
 	);

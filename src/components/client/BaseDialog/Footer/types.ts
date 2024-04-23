@@ -13,7 +13,7 @@ export type ButtonContentType = {
 };
 
 export type BaseDialogFooterPropsType = {
-  buttonsContent?: ButtonContentType[];
+  buttonsContent?: ButtonContentType[] | ButtonContentType;
   className?: string;
   variant?: VariantType;
   toggleModal?: () => void;

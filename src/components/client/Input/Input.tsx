@@ -46,12 +46,12 @@ export const Input = ({
 	helpTextClassName,
 	classNameInput,
 }: InputPropsType & {
-	containerClassName: string;
-	labelClassName: string;
-	feedbackMessageClassName: string;
-	iconTextClassName: string;
-	helpTextClassName: string;
-	classNameInput: string;
+	containerClassName?: string;
+	labelClassName?: string;
+	feedbackMessageClassName?: string;
+	iconTextClassName?: string;
+	helpTextClassName?: string;
+	classNameInput?: string;
 }) => {
 	const [signalFocus, setIsSignalFocus] = useState(isFocus);
 
@@ -75,7 +75,8 @@ export const Input = ({
 	}
 
 	containerClassName +=
-		" " + bgColor +
+		" " +
+		bgColor +
 		" " +
 		borderColor +
 		" " +
