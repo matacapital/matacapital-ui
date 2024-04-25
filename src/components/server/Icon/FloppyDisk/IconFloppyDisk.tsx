@@ -1,16 +1,14 @@
 import React from "react";
 import { IconPropsType } from "../types.ts";
 
-export const IconFloppyDisk = (
-  {
-    className,
-    variant,
-    size = "m",
-  }: IconPropsType,
-) => {
+export const IconFloppyDisk = ({
+  className,
+  variant,
+  size = "m",
+}: IconPropsType) => {
   className = className ?? "";
   if (variant) {
-   /*  className += " " + definition.svg.fill[variant].content; */
+    /*  className += " " + definition.svg.fill[variant].content; */
   }
 
   let width = 32;

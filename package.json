@@ -11,6 +11,7 @@
   "scripts": {
     "build": "tsup && cp src/components/definition.ts dist",
     "linter": "eslint . && echo \"Everything OK ! Eslint run without errors.\"",
+    "linter-fix": "eslint  . --fix",
     "lint": "tsc",
     "test": "jest",
     "storybook": "storybook dev -p 6006",

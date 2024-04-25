@@ -1,4 +1,7 @@
-export const fonts: Record<"corporate" | "sapians", { name: string; font: string; }[]> = {
+export const fonts: Record<
+  "corporate" | "sapians",
+  { name: string; font: string }[]
+> = {
   corporate: [
     { name: "Roboto Light", font: "/fonts/Roboto-Light.ttf" },
     { name: "Roboto Light Italic", font: "/fonts/Roboto-LightItalic.ttf" },

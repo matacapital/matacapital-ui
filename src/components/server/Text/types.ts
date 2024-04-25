@@ -54,6 +54,4 @@ export type TextElementType =
   | "h6"
   | "div";
 
-export type FontFamilyType =
-  | "primary"
-  | "secondary";
+export type FontFamilyType = "primary" | "secondary";

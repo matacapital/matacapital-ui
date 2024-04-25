@@ -6,8 +6,8 @@ const meta = {
   component: EmailForm,
   tags: ["autodocs"],
   parameters: {
-    layout: 'centered',
-  }
+    layout: "centered",
+  },
 } satisfies Meta<typeof EmailForm>;
 
 export default meta;
@@ -17,5 +17,5 @@ type Story = StoryObj<typeof meta>;
 export const Connexion: Story = {
   args: {
     platformTitle: "Matacapital",
-  }
+  },
 };

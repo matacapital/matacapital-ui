@@ -1,8 +1,6 @@
-
 import { MouseEvent } from "react";
 import { ChildrenComponents } from "../../../server-deps.ts";
 import { VariantType } from "../../../types.ts";
-
 
 export type ButtonContentType = {
   text: string;

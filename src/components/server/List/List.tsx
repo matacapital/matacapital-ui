@@ -15,9 +15,12 @@ const listStyles: ListElementType = {
   },
 };
 
-export const List = (
-  { size = "m", style = "unordered", children, className = "" }: ListPropsType,
-) => {
+export const List = ({
+  size = "m",
+  style = "unordered",
+  children,
+  className = "",
+}: ListPropsType) => {
   className += ` text-${size}`;
   className += ` list-${listStyles.style[style]}`;
   return (

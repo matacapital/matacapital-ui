@@ -1,6 +1,5 @@
 import { ButtonContentType } from "../types.ts";
 
-
 type ButtonType = {
   isOpened?: boolean;
   toggleModal?: () => void;
