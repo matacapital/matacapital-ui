@@ -1,13 +1,10 @@
 import React from "react";
-import { definition } from "../../../definition.ts";
 import { IconPropsType } from "../types.ts";
 
 
 export const SizedIconPenS = ({
 	className,
 	variant,
-	hover = false,
-	focus = false,
 }: Exclude<IconPropsType, "size">) => {
 	className = className ?? "";
 	if (variant) {

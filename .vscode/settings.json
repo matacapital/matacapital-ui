@@ -22,7 +22,7 @@
 	"typescript.inlayHints.variableTypes.enabled": true,
 
 	// Prettier
-	"prettier.useTabs": true,
+	"prettier.useTabs": false,
 	"prettier.tabWidth": 2,
 	"prettier.singleQuote": false,
 	"prettier.jsxSingleQuote": false,

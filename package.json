@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsup && cp src/components/definition.ts dist",
-    "linter": "eslint .",
+    "linter": "eslint . && echo \"Everything OK ! Eslint run without errors.\"",
     "lint": "tsc",
     "test": "jest",
     "storybook": "storybook dev -p 6006",

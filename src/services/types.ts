@@ -4,9 +4,9 @@ export type DateType =
   | undefined;
 
 export type IntlParameterType = {
-    date: DateType,
-    locale: string,
-    opts: Intl.DateTimeFormatOptions | undefined,
+    date: DateType;
+    locale: string;
+    opts: Intl.DateTimeFormatOptions | undefined;
     joinWith?: string;
 };
 

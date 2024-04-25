@@ -1,7 +1,5 @@
 import React from "react";
-import { definition } from "../../../definition.ts";
 import { IconPropsType } from "../types.ts";
-
 
 export const IconCornerLT = ({
 	className,

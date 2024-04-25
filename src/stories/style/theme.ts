@@ -150,4 +150,4 @@ const theme = {
 	},
 };
 
-export { theme } ;
+export { theme };
