@@ -16,6 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Connexion: Story = {
   args: {
-    platformTitle: "Matacapital"
+    platformTitle: "Matacapital",
   }
 };

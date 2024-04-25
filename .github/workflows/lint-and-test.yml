@@ -1,4 +1,4 @@
-name: tests
+name: Linter & Tester
 
 on:
   pull_request:
@@ -30,6 +30,9 @@ jobs:
       
       - name: Install dependencies
         run: npm i
+      
+      - name: Linter
+        run: npm run linter
       
       - name: Test
         run: npm run test

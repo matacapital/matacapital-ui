@@ -1,5 +1,4 @@
-// deno-lint-ignore-file no-explicit-any
-export const fonts: Record<"corporate" | "sapians", any[]> = {
+export const fonts: Record<"corporate" | "sapians", { name: string; font: string; }[]> = {
   corporate: [
     { name: "Roboto Light", font: "/fonts/Roboto-Light.ttf" },
     { name: "Roboto Light Italic", font: "/fonts/Roboto-LightItalic.ttf" },

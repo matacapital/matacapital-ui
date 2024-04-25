@@ -26,11 +26,6 @@ const Dialog = (
 		"backdrop:bg-grey-50 absolute w-[90%] sm:w-[575px] p-none";
 	className = className.trim();
 
-	let classNameBackdrop = " h-screen w-full";
-	classNameBackdrop += " fixed top-none left-none";
-	classNameBackdrop += " bg-base1-content";
-	classNameBackdrop = classNameBackdrop.trim();
-
 	return (
 		<dialog
 			ref={ref}
