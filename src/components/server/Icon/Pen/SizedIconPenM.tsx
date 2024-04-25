@@ -1,20 +1,13 @@
 import React from "react";
-import { definition } from "../../../definition.ts";
 import { IconPropsType } from "../types.ts";
 
-
-export const SizedIconPenM = (
-  {
-    className,
-    variant,
-  }: Exclude<
-    IconPropsType,
-    "size"
-  >,
-) => {
+export const SizedIconPenM = ({
+  className,
+  variant,
+}: Exclude<IconPropsType, "size">) => {
   className = className ?? "";
   if (variant) {
-   /*  className += " " + definition.svg.fill[variant].content; */
+    /*  className += " " + definition.svg.fill[variant].content; */
   }
 
   return (

@@ -5,60 +5,55 @@ import { BaseDialogBody } from "./Body/BaseDialogBody.tsx";
 import { BaseDialogFooter } from "./Footer/BaseDialogFooter.tsx";
 import { BaseDialogPropsType } from "./types.ts";
 import { Paragraph } from "../../server/Paragraph/Paragraph";
-import React from "react";
+import React, { ForwardedRef } from "react";
 
-export const BaseDialog = ({
-	title,
-	buttonsContent,
-	isOpened = false,
-	className,
-	children,
-	toggleCallback,
-	isCancellable = true,
-	onCancel,
-}: BaseDialogPropsType) => {
-	className = className ?? "";
-	className += "absolute w-[90%] sm:w-[575px] p-none";
-	className = className.trim();
+const Dialog = (
+  {
+    title,
+    buttonsContent,
+    className,
+    children,
+    footerClassName,
+    close,
+    isCancellable = true,
+    onCancel,
+  }: BaseDialogPropsType,
+  ref: ForwardedRef<null>,
+) => {
+  className = className ?? "";
+  className +=
+    (className ? " " : "") +
+    "backdrop:bg-grey-50 absolute w-[90%] sm:w-[575px] p-none";
+  className = className.trim();
 
-	let classNameBackdrop = " h-screen w-full";
-	classNameBackdrop += " fixed top-none left-none";
-	classNameBackdrop += " bg-base1-content";
-	classNameBackdrop = classNameBackdrop.trim();
-
-	return (
-		<div className={isOpened ? "" : "hidden"}>
-			<div
-				className={classNameBackdrop}
-				style={{ opacity: 0.75 }}
-			></div>
-			<dialog
-				open={isOpened}
-				className={className}
-				style={{ top: "100px" }}
-			>
-				<BaseDialogHeader
-					toggleModal={toggleCallback}
-					onCancel={onCancel}
-					isCancellable={isCancellable}
-					variant={"primary"}
-				>
-					{title}
-				</BaseDialogHeader>
-				<BaseDialogBody>
-					{typeof children === "string" ? (
-						<Paragraph>{children}</Paragraph>
-					) : (
-						children
-					)}
-				</BaseDialogBody>
-				<BaseDialogFooter
-					isOpened={isOpened}
-					buttonsContent={buttonsContent}
-					toggleModal={toggleCallback}
-					variant={"secondary"}
-				/>
-			</dialog>
-		</div>
-	);
+  return (
+    <dialog
+      ref={ref}
+      className={className}
+    >
+      <BaseDialogHeader
+        toggleModal={close}
+        onCancel={onCancel}
+        isCancellable={isCancellable}
+        variant={"primary"}
+      >
+        {title}
+      </BaseDialogHeader>
+      <BaseDialogBody>
+        {typeof children === "string" ? (
+          <Paragraph>{children}</Paragraph>
+        ) : (
+          children
+        )}
+      </BaseDialogBody>
+      <BaseDialogFooter
+        buttonsContent={buttonsContent}
+        toggleModal={close}
+        className={footerClassName}
+      />
+    </dialog>
+  );
 };
+
+const BaseDialog = React.forwardRef(Dialog);
+export { BaseDialog };

@@ -4,14 +4,7 @@ import { SizedIconPenS } from "./SizedIconPenS.tsx";
 import { SizedIconPenM } from "./SizedIconPenM.tsx";
 import { SizedIconPenL } from "./SizedIconPenL.tsx";
 
-
-export const IconPen = (
-  {
-    className,
-    variant,
-    size = "m",
-  }: IconPropsType,
-) => {
+export const IconPen = ({ className, variant, size = "m" }: IconPropsType) => {
   className = className ?? "";
   switch (size) {
     case "s":

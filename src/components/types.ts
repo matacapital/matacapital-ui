@@ -7,9 +7,7 @@ export type BasePropsType = {
 
 export type CallbackType = (arg: string) => void;
 
-export type EventType =
-  | "focus"
-  | "hover";
+export type EventType = "focus" | "hover";
 
 export type VariantStateType = "content" | "default" | "focus";
 
@@ -43,27 +41,11 @@ export type RadiusCornerType = "all" | "top" | "right" | "bottom" | "left";
 export type RadiusType =
   | "none"
   | "full"
-  | Partial<
-    Record<RadiusCornerType, "none" | "xs" | "s" | "m" | "l" | "xl">
-  >;
+  | Partial<Record<RadiusCornerType, "none" | "xs" | "s" | "m" | "l" | "xl">>;
 
-export type BorderSizeType =
-  | "none"
-  | "xs"
-  | "s"
-  | "m"
-  | "l"
-  | "xl";
+export type BorderSizeType = "none" | "xs" | "s" | "m" | "l" | "xl";
 
-export type SizeType =
-  | "xs"
-  | "s"
-  | "m"
-  | "l"
-  | "xl"
-  | "2xl"
-  | "3xl"
-  | "4xl";
+export type SizeType = "xs" | "s" | "m" | "l" | "xl" | "2xl" | "3xl" | "4xl";
 
 export type TransitionDurationType =
   | "none"

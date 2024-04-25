@@ -1,18 +1,14 @@
 import React from "react";
-import { definition } from "../../../definition.ts";
 import { IconPropsType } from "../types.ts";
 
-
-export const IconArrowRight = (
-  {
-    className,
-    variant,
-    size = "s",
-  }: IconPropsType,
-) => {
+export const IconArrowRight = ({
+  className,
+  variant,
+  size = "s",
+}: IconPropsType) => {
   className = className ?? "";
   if (variant) {
-   /*  className += " " + definition.svg.fill[variant].content; */
+    /*  className += " " + definition.svg.fill[variant].content; */
   }
 
   let width = 32;

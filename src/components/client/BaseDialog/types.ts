@@ -1,20 +1,19 @@
-
 import { MouseEvent } from "react";
 import { ChildrenComponents } from "../../server-deps";
-import { ButtonContentType } from '../BaseDialog/Footer/types.ts';
+import { ButtonContentType } from "../BaseDialog/Footer/types.ts";
 
 export type BaseDialogPropsType = {
   title?: string;
-  buttonsContent?: ButtonContentType[];
-  isOpened: boolean;
+  buttonsContent?: ButtonContentType[] | ButtonContentType;
   className?: string;
   children: ChildrenComponents;
-  toggleCallback?: () => void;
+  close?: () => void;
   isCancellable?: boolean;
   onCancel?: (event: MouseEvent) => void;
+  footerClassName?: string;
 };
 
 export type DialogPropsType = {
   isOpened: boolean;
-  toggleCallback?: () => void;
+  close?: () => void;
 };
