@@ -14,6 +14,5 @@ export type BaseDialogPropsType = {
 };
 
 export type DialogPropsType = {
-  isOpened: boolean;
   close?: () => void;
 };

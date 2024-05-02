@@ -7,7 +7,7 @@ import type { Config } from "jest";
 const config: Config = {
 	clearMocks: true,
 	globals: {
-		fetch,
+		// fetch,
 	},
 	testEnvironment: "jsdom",
 	testMatch: ["**/__tests__/**/*.[jt]s?(x)"],

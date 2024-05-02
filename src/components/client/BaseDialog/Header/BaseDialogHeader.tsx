@@ -32,7 +32,7 @@ export const BaseDialogHeader = ({
       background={{ variant }}
     >
       <Text
-        element="h4"
+        element={"h4"}
         size={"xl"}
       >
         {children}
