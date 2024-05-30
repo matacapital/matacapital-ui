@@ -15,9 +15,19 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+const closeDialog = () => {
+  if (document && document.querySelector("dialog")) {
+    setTimeout(() => {
+      const dialog = document.querySelector("dialog");
+      dialog?.close();
+    }, 0);
+  }
+};
+
 export const BaseDialogBasicStyle: Story = {
   args: {
-    title: "test",
+    close: closeDialog,
+    title: "Dialog title",
     buttonsContent: { text: "cancel" },
     className: "",
     children:
@@ -25,3 +35,18 @@ export const BaseDialogBasicStyle: Story = {
     footerClassName: "border-t border-neutral-default",
   },
 };
+
+// On click on document, open dialog.
+(() => {
+  if (document) {
+    const root = document.querySelector("#storybook-root");
+
+    setTimeout(() => {
+      if (root) {
+        document.addEventListener("click", () => {
+          root.querySelector("dialog")?.showModal();
+        });
+      }
+    }, 0);
+  }
+})();
