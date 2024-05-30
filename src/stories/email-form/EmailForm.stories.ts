@@ -2,9 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { EmailForm } from "./EmailForm";
 
 const meta = {
-  title: "Example/EmailForm",
+  title: "Scenarios/landing/EmailForm",
   component: EmailForm,
-  tags: ["autodocs"],
   parameters: {
     layout: "centered",
   },

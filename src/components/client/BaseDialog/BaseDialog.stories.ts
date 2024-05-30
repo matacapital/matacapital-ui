@@ -1,0 +1,27 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import { BaseDialog } from "./BaseDialog";
+// import { fireEvent, userEvent, within } from "@storybook/test";
+
+const meta = {
+  title: "Components/client/atoms/BaseDialog",
+  tags: ["autodocs"],
+  component: BaseDialog,
+  parameters: {
+    layout: "centered",
+  },
+} satisfies Meta<typeof BaseDialog>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const BaseDialogBasicStyle: Story = {
+  args: {
+    title: "test",
+    buttonsContent: { text: "cancel" },
+    className: "",
+    children:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At volutpat diam ut venenatis tellus in. Elementum sagittis vitae et leo duis ut diam quam.",
+    footerClassName: "border-t border-neutral-default",
+  },
+};
