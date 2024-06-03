@@ -59,17 +59,17 @@ export const Text = ({
     case "ol":
       return <ol className={className}>{children}</ol>;
     case "h1":
-      return <h1 className={className}>{children}</h1>;
+      return <h1 className={className + " text-4xl"}>{children}</h1>;
     case "h2":
-      return <h2 className={className}>{children}</h2>;
+      return <h2 className={className + " text-3xl"}>{children}</h2>;
     case "h3":
-      return <h3 className={className}>{children}</h3>;
+      return <h3 className={className + " text-2xl"}>{children}</h3>;
     case "h4":
-      return <h4 className={className}>{children}</h4>;
+      return <h4 className={className + " text-xl"}>{children}</h4>;
     case "h5":
-      return <h5 className={className}>{children}</h5>;
+      return <h5 className={className + " text-lg"}>{children}</h5>;
     case "h6":
-      return <h6 className={className}>{children}</h6>;
+      return <h6 className={className + " text-base"}>{children}</h6>;
     case "div":
       return <div className={className}>{children}</div>;
   }

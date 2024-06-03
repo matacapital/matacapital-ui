@@ -3,7 +3,7 @@ import { BaseDialog } from "./BaseDialog";
 // import { fireEvent, userEvent, within } from "@storybook/test";
 
 const meta = {
-  title: "Components/client/atoms/BaseDialog",
+  title: "Components/client/Dialog",
   tags: ["autodocs"],
   component: BaseDialog,
   parameters: {

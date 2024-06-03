@@ -1,16 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Input } from "./Input";
-// import { fireEvent, userEvent, within } from "@storybook/test";
 
 const meta = {
-  title: "Components/client/atoms/Input",
+  title: "Components/client/Input",
   tags: ["autodocs"],
   component: Input,
   parameters: {
     layout: "centered",
   },
   args: {
-    onChange: (event) => alert(event.target.value),
+    onChange: (event) => { alert(event.target.value) },
   },
 } satisfies Meta<typeof Input>;
 

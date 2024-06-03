@@ -3,14 +3,14 @@ import { Button } from "./Button";
 // import { fireEvent, userEvent, within } from "@storybook/test";
 
 const meta = {
-  title: "Components/client/atoms/Button",
+  title: "Components/client/Button",
   tags: ["autodocs"],
   component: Button,
   parameters: {
     layout: "centered",
   },
   args: {
-    onClick: (event) => alert(event.target),
+    onClick: (event) => alert("Hello World !"),
   },
 } satisfies Meta<typeof Button>;
 
