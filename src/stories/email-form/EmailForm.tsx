@@ -1,3 +1,4 @@
+import { IconArrowRight } from "../../..";
 import {
   Button,
   Input,
@@ -97,6 +98,7 @@ export const EmailForm = ({ platformTitle }: FormPropsType) => {
           />
           <Button
             type={"submit"}
+            trailingIcon={<IconArrowRight />}
             children={"commencer"}
             className={"w-full pt-4"}
             variant={Validator.isEmail(email.value) ? "primary" : "neutral"}
