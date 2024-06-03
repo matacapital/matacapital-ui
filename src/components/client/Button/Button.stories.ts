@@ -11,7 +11,7 @@ const meta = {
     layout: "centered",
   },
   args: {
-    onClick: (event) => alert("Hello World !"),
+    onClick: () => alert("Hello World !"),
   },
 } satisfies Meta<typeof Button>;
 

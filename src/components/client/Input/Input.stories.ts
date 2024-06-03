@@ -9,7 +9,9 @@ const meta = {
     layout: "centered",
   },
   args: {
-    onChange: (event) => { alert(event.target.value) },
+    onChange: (event) => {
+      alert(event.target.value);
+    },
   },
 } satisfies Meta<typeof Input>;
 
