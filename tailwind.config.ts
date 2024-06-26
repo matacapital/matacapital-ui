@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import { theme } from "./src/stories/style/theme";
+import { theme } from "./src/style/theme";
 
 const config: Config = {
 	content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],

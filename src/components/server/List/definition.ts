@@ -1,4 +1,4 @@
-import { definition as globalDefinition } from "../../definition.ts";
+import { definition as globalDefinition } from "../../styles-map/definition.ts";
 
 export const definition: Record<string, any> = {
   ...globalDefinition,

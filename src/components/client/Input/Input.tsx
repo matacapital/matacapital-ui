@@ -9,7 +9,7 @@ import {
 } from "../../client-deps.ts";
 import { NBSP_STRING, STATE_COLORS } from "./constants.ts";
 import { InputPropsType } from "./types.ts";
-import { Container } from "../../server/Container/mod.ts";
+import { Container } from "../../server/atoms/Container/container.module.ts";
 import { Text } from "../../server/Text/mod.ts";
 import React from "react";
 

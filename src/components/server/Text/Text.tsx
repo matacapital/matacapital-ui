@@ -1,5 +1,5 @@
 import React from "react";
-import { definition } from "../../definition.ts";
+import { definition } from '../../styles-map/definition.ts';
 import { TextPropsType } from "./types.ts";
 
 export const Text = ({

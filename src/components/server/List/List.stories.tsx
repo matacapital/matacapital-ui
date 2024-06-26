@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { List } from "./List";
-import { ListItem } from "./mod";
+import { ListItem } from './list.module';
 import React from "react";
 
 const meta = {

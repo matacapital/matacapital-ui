@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Container } from "../../../../components/server/Container/Container";
+import { Container } from "../../../server/atoms/Container/Container.tsx";
 import { OneButton, TwoButtons } from "./FooterWithButtons/mod.ts";
 import { BaseDialogFooterPropsType } from "./types.ts";
 

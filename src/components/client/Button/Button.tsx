@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { Container } from "../../server/Container/mod.ts";
-import { definition } from "../../definition.ts";
-import { Text } from "../../server/Text/mod.ts";
-import { ButtonPropsType } from "./types.ts";
-import { useState, MouseEvent } from "../../client-deps.ts";
-import React from "react";
+import { Container } from '../../server/atoms/Container/container.module.ts';
+import { definition } from '../../styles-map/definition.ts';
+import { Text } from '../../server/Text/mod.ts';
+import { ButtonPropsType } from './types.ts';
+import { useState, MouseEvent } from '../../client-deps.ts';
+import React from 'react';
 
 export const Button = ({
-  type = "button",
-  variant = "primary",
+  type = 'button',
+  variant = 'primary',
   isStyledAsLink = false,
-  size = "m",
+  size = 'm',
   children,
   onClick,
   className,
@@ -22,11 +22,11 @@ export const Button = ({
   href,
   isTargetedToANewTab = false,
 }: ButtonPropsType) => {
-  className = className ?? "";
+  className = className ?? '';
 
   const [isClickAnimationPlaying, setIsClickAnimationPlaying] = useState(false);
-  let classNameLink = "";
-  let classNameIconArea = "";
+  let classNameLink = '';
+  let classNameIconArea = '';
 
   const {
     background: { color },
@@ -37,15 +37,15 @@ export const Button = ({
 
   //default class
   className +=
-    " " +
-    "rounded-btn group leading-none inline-flex flex-row items-center border-none outline-none focus:outline-none";
+    ' ' +
+    'rounded-btn group leading-none inline-flex flex-row items-center border-none outline-none focus:outline-none';
 
   if (isDisabled) {
-    usedVariant = "disabled";
+    usedVariant = 'disabled';
     if (isStyledAsLink) {
       //todo : if ButtonLink are used with isDisabled=true, we have to find a better way to show disabled link whithout replace variant by base1 colors
-      usedVariant = "base1";
-      className += " " + "opacity-50";
+      usedVariant = 'base1';
+      className += ' ' + 'opacity-50';
     }
   }
 
@@ -77,20 +77,20 @@ export const Button = ({
     classNameIconArea += ` h-${size}`;
   }
 
-  let spacingLeft = "ml-s";
-  let spacingRight = "mr-s";
+  let spacingLeft = 'ml-s';
+  let spacingRight = 'mr-s';
   switch (size) {
-    case "s":
-      spacingLeft = "ml-xs";
-      spacingRight = "mr-xs";
+    case 's':
+      spacingLeft = 'ml-xs';
+      spacingRight = 'mr-xs';
       break;
-    case "m":
-      spacingLeft = "ml-s";
-      spacingRight = "mr-s";
+    case 'm':
+      spacingLeft = 'ml-s';
+      spacingRight = 'mr-s';
       break;
-    case "l":
-      spacingLeft = "ml-m";
-      spacingRight = "mr-m";
+    case 'l':
+      spacingLeft = 'ml-m';
+      spacingRight = 'mr-m';
       break;
   }
 
@@ -106,23 +106,23 @@ export const Button = ({
     <>
       {leadingIcon ? (
         <Container
+          className={children ? spacingRight : 'none'}
           element="span"
-          className={children ? spacingRight : "none"}
         >
           {leadingIcon}
         </Container>
       ) : (
         <span className={classNameIconArea}></span>
       )}
-      {typeof children === "string" ? (
+      {typeof children === 'string' ? (
         <Text
+          className={'m-auto ' + classNameLink.trim()}
           element="span"
-          variant={usedVariant}
-          size={size}
+          focus={false}
           fontStyle="bold"
           hover={false}
-          focus={false}
-          className={"m-auto " + classNameLink.trim()}
+          size={size}
+          variant={usedVariant}
         >
           {children}
         </Text>
@@ -131,8 +131,8 @@ export const Button = ({
       )}
       {trailingIcon ? (
         <Container
+          className={children || leadingIcon ? spacingLeft : ''}
           element="span"
-          className={children || leadingIcon ? spacingLeft : ""}
         >
           {trailingIcon}
         </Container>
@@ -145,25 +145,25 @@ export const Button = ({
     <>
       {href ? (
         <a
-          type={type}
-          href={href}
-          onClick={animateAndClick}
           className={className}
+          href={href}
+          rel={isTargetedToANewTab ? 'noreferrer' : ''}
           style={style}
+          target={isTargetedToANewTab ? '_blank' : '_self'}
+          type={type}
           onAnimationEnd={() => setIsClickAnimationPlaying(false)}
-          target={isTargetedToANewTab ? "_blank" : "_self"}
-          rel={isTargetedToANewTab ? "noreferrer" : ""}
+          onClick={animateAndClick}
         >
           {buttonContent}
         </a>
       ) : (
         <button
-          type={type}
-          onClick={animateAndClick}
           className={className}
-          style={style}
           disabled={isDisabled}
+          style={style}
+          type={type}
           onAnimationEnd={() => setIsClickAnimationPlaying(false)}
+          onClick={animateAndClick}
         >
           {buttonContent}
         </button>
