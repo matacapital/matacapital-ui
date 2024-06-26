@@ -4,7 +4,8 @@ import { Container } from './Container';
 import { ContainerPropsType } from './types/types';
 
 export default {
-  title: 'Atoms/Container',
+  title: 'Components/server/Atoms/Container',
+  tags: ['autodocs'],
   component: Container,
   argTypes: {
     element: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from '../../Text/mod.ts';
+import { Text } from '../Text/text.module.ts';
 import { LinkPropsType } from './types.ts';
 
 export const Link = ({

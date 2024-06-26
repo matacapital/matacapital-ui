@@ -10,7 +10,7 @@ import {
 import { NBSP_STRING, STATE_COLORS } from "./constants.ts";
 import { InputPropsType } from "./types.ts";
 import { Container } from "../../server/atoms/Container/container.module.ts";
-import { Text } from "../../server/Text/mod.ts";
+import { Text } from '../../server/atoms/Text/text.module.ts';
 import React from "react";
 
 export const Input = ({

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TextElementType } from "../Text/mod.ts";
+import { Text, TextElementType } from '../atoms/Text/text.module.ts';
 import { ListElementType, ListPropsType } from "./types.ts";
 
 const listStyles: ListElementType = {

@@ -1808,6 +1808,70 @@ video {
   text-align: end;
 }
 
+.font-primary-bold {
+  font-family: var(--font-primary-bold);
+}
+
+.font-primary-bold-italic {
+  font-family: var(--font-primary-bold-italic);
+}
+
+.font-primary-italic {
+  font-family: var(--font-primary-italic);
+}
+
+.font-primary-light {
+  font-family: var(--font-primary-light);
+}
+
+.font-primary-light-italic {
+  font-family: var(--font-primary-light-italic);
+}
+
+.font-primary-medium {
+  font-family: var(--font-primary-medium);
+}
+
+.font-primary-medium-italic {
+  font-family: var(--font-primary-medium-italic);
+}
+
+.font-secondary-bold {
+  font-family: var(--font-secondary-bold);
+}
+
+.font-secondary-bold-italic {
+  font-family: var(--font-secondary-bold-italic);
+}
+
+.font-secondary-italic {
+  font-family: var(--font-secondary-italic);
+}
+
+.font-secondary-light {
+  font-family: var(--font-secondary-light);
+}
+
+.font-secondary-light-italic {
+  font-family: var(--font-secondary-light-italic);
+}
+
+.font-secondary-medium {
+  font-family: var(--font-secondary-medium);
+}
+
+.font-secondary-medium-italic {
+  font-family: var(--font-secondary-medium-italic);
+}
+
+.font-secondary-semi-bold {
+  font-family: var(--font-secondary-semi-bold);
+}
+
+.font-secondary-semi-bold-italic {
+  font-family: var(--font-secondary-semi-bold-italic);
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2594,6 +2658,27 @@ video {
 
 ::backdrop {
   background: rgb(0 0 0 / .75);
+}
+
+:root {
+  --font-primary-light: 'Font Primary Light';
+  --font-primary-light-italic: 'Font Primary Light Italic';
+  --font-primary: 'Font Primary Regular';
+  --font-primary-italic: 'Font Primary Italic';
+  --font-primary-medium: 'Font Primary Medium';
+  --font-primary-medium-italic: 'Font Primary Medium Italic';
+  --font-primary-bold: 'Font Primary Bold';
+  --font-primary-bold-italic: 'Font Primary Bold Italic';
+  --font-secondary-light: 'Font Secondary Light';
+  --font-secondary-light-italic: 'Font Secondary Light Italic';
+  --font-secondary: 'Font Secondary Regular';
+  --font-secondary-italic: 'Font Secondary Italic';
+  --font-secondary-medium: 'Font Secondary Medium';
+  --font-secondary-medium-italic: 'Font Secondary Medium Italic';
+  --font-secondary-semi-bold: 'Font Secondary Semi Bold';
+  --font-secondary-semi-bold-italic: 'Font Secondary Semi Bold Italic';
+  --font-secondary-bold: 'Font Secondary Bold';
+  --font-secondary-bold-italic: 'Font Secondary Bold Italic';
 }
 
 @media (min-width: 1024px) {

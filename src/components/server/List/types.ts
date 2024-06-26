@@ -1,5 +1,5 @@
 import { ChildrenComponents } from "../../server-deps.ts";
-import { TextElementType } from "../Text/mod.ts";
+import { TextElementType } from '../atoms/Text/text.module.ts';
 
 export type ListStyleType = "ordered" | "unordered" | "none";
 export type ListElementStyleType = "decimal" | "disc" | "none";

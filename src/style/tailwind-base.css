@@ -5,3 +5,24 @@
 ::backdrop {
   background: rgb(0 0 0 / .75);
 }
+
+:root {
+  --font-primary-light: 'Font Primary Light';
+  --font-primary-light-italic: 'Font Primary Light Italic';
+  --font-primary: 'Font Primary Regular';
+  --font-primary-italic: 'Font Primary Italic';
+  --font-primary-medium: 'Font Primary Medium';
+  --font-primary-medium-italic: 'Font Primary Medium Italic';
+  --font-primary-bold: 'Font Primary Bold';
+  --font-primary-bold-italic: 'Font Primary Bold Italic';
+  --font-secondary-light: 'Font Secondary Light';
+  --font-secondary-light-italic: 'Font Secondary Light Italic';
+  --font-secondary: 'Font Secondary Regular';
+  --font-secondary-italic: 'Font Secondary Italic';
+  --font-secondary-medium: 'Font Secondary Medium';
+  --font-secondary-medium-italic: 'Font Secondary Medium Italic';
+  --font-secondary-semi-bold: 'Font Secondary Semi Bold';
+  --font-secondary-semi-bold-italic: 'Font Secondary Semi Bold Italic';
+  --font-secondary-bold: 'Font Secondary Bold';
+  --font-secondary-bold-italic: 'Font Secondary Bold Italic';
+}

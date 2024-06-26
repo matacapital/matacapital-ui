@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "../../Text/mod.ts";
+import { Text } from '../../atoms/Text/text.module.ts';
 import { ListItemPropsType } from "./types.ts";
 
 export const ListItem = ({ children, className }: ListItemPropsType) => {

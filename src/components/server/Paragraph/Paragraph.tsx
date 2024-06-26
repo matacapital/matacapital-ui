@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "../Text/mod.ts";
+import { Text } from '../atoms/Text/text.module.ts';
 import { ParagraphPropsType } from "./types.ts";
 
 export const Paragraph = ({

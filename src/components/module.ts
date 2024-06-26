@@ -12,7 +12,7 @@ export * from './server/Icon/mod.ts';
 export * from './server/atoms/Link/link.module.ts';
 export * from './server/List/list.module.ts';
 export * from './server/Paragraph/mod.ts';
-export * from './server/Text/mod.ts';
+export * from './server/atoms/Text/text.module.ts';
 
 // utils
 export * from './client-deps.ts';

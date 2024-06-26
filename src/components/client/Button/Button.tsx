@@ -2,7 +2,7 @@
 
 import { Container } from '../../server/atoms/Container/container.module.ts';
 import { definition } from '../../styles-map/definition.ts';
-import { Text } from '../../server/Text/mod.ts';
+import { Text } from '../../server/atoms/Text/text.module.ts';
 import { ButtonPropsType } from './types.ts';
 import { useState, MouseEvent } from '../../client-deps.ts';
 import React from 'react';

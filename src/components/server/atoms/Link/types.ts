@@ -1,6 +1,6 @@
 import { ChildrenComponents } from '../../../server-deps.ts';
 import { SizeType, VariantType } from '../../../types.ts';
-import { FontFamilyType, FontStyleType } from '../../Text/types.ts';
+import { FontFamilyType, FontStyleType } from '../Text/types.ts';
 
 export type LinkPropsType = {
   variant?: VariantType;
