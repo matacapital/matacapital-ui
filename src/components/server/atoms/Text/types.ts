@@ -1,4 +1,4 @@
-import { SizeType, VariantType } from '../../../types.ts';
+import { SizeType, VariantType } from '../../../utils/types/types.ts';
 
 import { ChildrenComponents } from '../../../server-deps.ts';
 

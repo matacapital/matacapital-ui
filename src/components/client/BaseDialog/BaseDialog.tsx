@@ -4,7 +4,7 @@ import { BaseDialogHeader } from "./Header/BaseDialogHeader.tsx";
 import { BaseDialogBody } from "./Body/BaseDialogBody.tsx";
 import { BaseDialogFooter } from "./Footer/BaseDialogFooter.tsx";
 import { BaseDialogPropsType } from "./types.ts";
-import { Paragraph } from "../../server/Paragraph/Paragraph";
+import { Paragraph } from '../../server/atoms/Paragraph/Paragraph.tsx';
 import React, { ForwardedRef } from "react";
 
 const Dialog = (

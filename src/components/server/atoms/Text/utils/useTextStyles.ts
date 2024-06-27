@@ -1,4 +1,4 @@
-import { definition } from '../../../../styles-map/definition.ts';
+import { definition } from '../../../../utils/styles-map/definition.ts';
 import classNames from 'classnames';
 import { TextPropsType } from '../types';
 

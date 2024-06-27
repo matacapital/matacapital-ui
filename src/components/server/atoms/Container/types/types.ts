@@ -5,7 +5,7 @@ import {
   SizeType,
   SpacingType,
   VariantType,
-} from '../../../../types.ts';
+} from '../../../../utils/types/types.ts';
 
 export type ContainerBorderType = {
   size?: BorderSizeType;
