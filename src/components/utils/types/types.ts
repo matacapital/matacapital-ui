@@ -1,4 +1,4 @@
-import { ChildrenComponents } from './server-deps.ts';
+import { ChildrenComponents } from '../../server-deps.ts';
 
 export type BasePropsType = {
   children: ChildrenComponents;

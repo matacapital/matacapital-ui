@@ -8,7 +8,7 @@ export * from './client/Input/mod.ts';
 // server components
 export * from './server/atoms/Area/area.module.ts';
 export * from './server/atoms/Container/container.module.ts';
-export * from './server/Icon/mod.ts';
+
 export * from './server/atoms/Link/link.module.ts';
 export * from './server/List/list.module.ts';
 export * from './server/atoms/Paragraph/paragraph.module.ts';

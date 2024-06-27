@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../atoms/Container/container.module.ts';
+import { Container } from '../Container/container.module.ts';
 import { AreaPropsType } from './types.ts';
 
 export const Area = ({

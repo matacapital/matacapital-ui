@@ -27,7 +27,7 @@ export const Text = ({
     className,
   });
 
-  const Element = elementMap[element] || 'span';
+  const Element = elementMap[element] || 'p';
   const combinedClassName = classNames(
     baseClassName,
     additionalClasses[element],

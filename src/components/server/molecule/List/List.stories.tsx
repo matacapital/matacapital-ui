@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { List } from "./List";
+import type { Meta, StoryObj } from '@storybook/react';
+import { List } from './List';
 import { ListItem } from './list.module';
-import React from "react";
+import React from 'react';
 
 const meta = {
-  title: "Components/server/List",
-  tags: ["autodocs"],
+  title: 'Components/server/Molecule/List',
+  tags: ['autodocs'],
   component: List,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
 } satisfies Meta<typeof List>;
 
@@ -18,9 +18,9 @@ type Story = StoryObj<typeof meta>;
 
 const children = (
   <>
-    <ListItem children={"item 1"} />
-    <ListItem children={"item 2"} />
-    <ListItem children={"item 3"} />
+    <ListItem children={'item 1'} />
+    <ListItem children={'item 2'} />
+    <ListItem children={'item 3'} />
   </>
 );
 
@@ -32,7 +32,7 @@ export const ListNonOrdered: Story = {
 
 export const ListOrdered: Story = {
   args: {
-    style: "ordered",
+    style: 'ordered',
     children,
   },
 };

@@ -1,25 +1,26 @@
-import React from "react";
-import { Text, TextElementType } from '../atoms/Text/text.module.ts';
-import { ListElementType, ListPropsType } from "./types.ts";
+import React from 'react';
+
+import { ListElementType, ListPropsType } from './types.ts';
+import { Text, TextElementType } from '../../atoms/atoms.module.ts';
 
 const listStyles: ListElementType = {
   type: {
-    ordered: "ol",
-    unordered: "ul",
-    none: "ul",
+    ordered: 'ol',
+    unordered: 'ul',
+    none: 'ul',
   },
   style: {
-    ordered: "decimal",
-    unordered: "disc",
-    none: "none",
+    ordered: 'decimal',
+    unordered: 'disc',
+    none: 'none',
   },
 };
 
 export const List = ({
-  size = "m",
-  style = "unordered",
+  size = 'm',
+  style = 'unordered',
   children,
-  className = "",
+  className = '',
 }: ListPropsType) => {
   className += ` text-${size}`;
   className += ` list-${listStyles.style[style]}`;

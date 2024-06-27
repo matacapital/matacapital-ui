@@ -16,7 +16,6 @@ export const elementMap: { [key: string]: React.ElementType } = {
   h4: 'h4',
   h5: 'h5',
   h6: 'h6',
-  div: 'div',
 };
 
 export const additionalClasses: { [key: string]: string } = {

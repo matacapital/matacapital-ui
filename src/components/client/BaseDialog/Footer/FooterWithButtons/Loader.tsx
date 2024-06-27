@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { IconSyncAlt } from "../../../../../components/server/Icon/mod";
+import { IconSyncAlt } from '../../../../server/atoms/Icon/mod';
 import { Button } from "../../../Button/Button";
 
 export const Loader = () => {
